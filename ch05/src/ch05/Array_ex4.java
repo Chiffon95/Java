@@ -19,8 +19,11 @@ public class Array_ex4 {
 			ball[ranNum] = temp;
 		}
 		
-		for (int i = 0; i < 6; i++) {
-			System.out.printf("%d", ball[i]);
+		int[] arrNum = Arrays.copyOfRange(ball, 0, 6);
+		Arrays.sort(arrNum);
+		
+		for (int i = 0; i < arrNum.length; i++) {
+			System.out.printf("%d", arrNum[i]);
 			
 			if(i != 5)
 				System.out.print(", ");
