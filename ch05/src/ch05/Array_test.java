@@ -22,7 +22,6 @@ public class Array_test {
 		System.out.println();
 		
 		//Q4
-		
 		int[][] arr = {
 				{5, 5, 5, 5, 5},
 				{10, 10, 10, 10, 10},
