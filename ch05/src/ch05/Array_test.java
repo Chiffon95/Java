@@ -19,6 +19,7 @@ public class Array_test {
 		ball3 = Arrays.copyOf(ballArr, ball3.length);
 		
 		System.out.println(Arrays.toString(ball3));
+		System.out.println();
 		
 		//Q4
 		
@@ -40,6 +41,7 @@ public class Array_test {
 		
 		System.out.println("Total : " + total);
 		System.out.println("Average : " + average);
+		System.out.println();
 		
 		//Q5
 		int[] coinUnit = {500, 100, 50, 10};
