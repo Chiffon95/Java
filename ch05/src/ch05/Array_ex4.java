@@ -1,4 +1,5 @@
 package ch05;
+import java.util.Arrays;
 
 public class Array_ex4 {
 
@@ -9,8 +10,9 @@ public class Array_ex4 {
 		for (int i = 0; i < ball.length; i++) {
 			ball[i] = i + 1;
 		}
+		System.out.println(Arrays.toString(ball));
 		
-		for (int i = 0; i < ball.length - 1; i++) {
+		for (int i = 0; i < ball.length; i++) {
 			int ranNum = (int)(Math.random() * ball.length);
 			int temp = ball[i];
 			ball[i] = ball[ranNum];
