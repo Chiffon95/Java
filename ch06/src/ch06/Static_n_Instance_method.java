@@ -13,7 +13,7 @@ public class Static_n_Instance_method {
 		System.out.println(cv);
 	}
 	static void staticMethod() {
-//		System.out.println(iv); -> Error!
+//		System.out.println(iv); //-> Error!
 		System.out.println(cv);
 	}
 	
@@ -26,7 +26,7 @@ public class Static_n_Instance_method {
 	}
 	
 	static void staticMethod3() {
-//		instanceMethod2(); -> Error !
+//		instanceMethod2(); //-> Error !
 		staticMethod2();
 	}
 }
