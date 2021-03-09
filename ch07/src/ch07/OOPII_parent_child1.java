@@ -31,5 +31,4 @@ public class OOPII_parent_child1 {
 		stv.caption = false;
 		stv.displayCaption("Hello, Java! - 2");
 	}
-
 }
