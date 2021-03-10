@@ -18,13 +18,11 @@ class Student1{
 		this.math = math;
 	}
 
-	String info() {
-		String totalInfo;
-		
-		totalInfo = "Name : " + name + ", Ban : " + ban + ", Num : " + num +
-				"\nKor score : " + kor + ", Eng score : " + eng + ", Math score : " + math;
-		
-		return totalInfo;
+	String info() {		
+		return "Name : " + name + ", Ban : " + ban + ", Num : " + num +
+				"\nKor score : " + kor + ", Eng score : " + eng + ", Math score : " + math
+				+ "\nSum : " + (this.kor + this.eng + this.math)
+				+ ", Average : " + (int)((kor + eng + math) / 3f * 10 + 0.5) / 10f;
 	}
 }
 public class OOP1_test {

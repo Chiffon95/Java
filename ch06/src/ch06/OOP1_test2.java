@@ -18,20 +18,19 @@ class Student2{
 		this.math = math;
 	}
 
-	String info() {
-		String totalInfo;
-		
-		totalInfo = "Name : " + name + ", Ban : " + ban + ", Num : " + num +
-				"\nKor score : " + kor + ", Eng score : " + eng + ", Math score : " + math;
-		
-		return totalInfo;
+	String info2() {		
+		return "Name : " + name + ", Ban : " + ban + ", Num : " + num +
+				"\nKor score : " + kor + ", Eng score : " + eng + ", Math score : " + math
+				+ "\nSum : " + getTotal2()
+				+ ", Average : " + getAverage2();
 	}
 	
-	int getTotal() {		
-		return kor + eng + math;
+	int getTotal2() {		
+		return (this.kor + this.eng + this.math);
 	}
-	float getAverage() {
-		return (float)Math.round((float)getTotal()/3 * 10) /10;
+	float getAverage2() {
+		return Math.round(getTotal2() / 3f * 10) /10f;
+		//OR return (int)(getTotal2() / 3f * 10 + 0.5) / 10f;
 	}
 }
 public class OOP1_test2 {
@@ -47,8 +46,9 @@ public class OOP1_test2 {
 		s.math = 76;
 		
 		System.out.println("Name : " + s.name);
-		System.out.println("Total Sum : " + s.getTotal());
-		System.out.println("Average : " + s.getAverage());
+		System.out.println("Total Sum : " + s.getTotal2());
+		System.out.println("Average : " + s.getAverage2());
+		System.out.println(s.info2());
 	}
 
 }
