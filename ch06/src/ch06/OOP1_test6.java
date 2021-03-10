@@ -6,7 +6,7 @@ public class OOP1_test6 {
 		return Math.abs(value);
 	}
 	static int abs2(int value) {
-		return (value >= 0) ? value : value * -1;
+		return (value >= 0) ? value : -value;
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

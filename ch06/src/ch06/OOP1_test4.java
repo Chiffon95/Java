@@ -7,7 +7,9 @@ public class OOP1_test4 {
 		if (str == "" || str == null) return false;
 		
 		for (int i = 0; i < str.length(); i++) {
-			if (! ( '0' <= str.charAt(i) && str.charAt(i) <= '9') ) return false;
+			char ch = str.charAt(i);
+			
+			if (! ( '0' <= ch && ch <= '9') ) return false;
 		}
 		return true;
 	}
