@@ -1,44 +1,45 @@
 package ch07_OOPII;
 
-class Product{
+import java.util.Vector;
+
+class Product2{
 	int price; int bonusPoint;
 }
 
-class TV extends Product{
-	TV(){
+class TV2 extends Product2{
+	TV2(){
 		super.price = 1_000_000;
 		super.bonusPoint = super.price / 10;
 	}
 	
-	public String toString() { return "TV"; }
+	public String toString() { return "TV2"; }
 }
 
-class Computer extends Product{
-	Computer(){
+class Computer2 extends Product2{
+	Computer2(){
 		super.price = 2_000_000;
 		super.bonusPoint = super.price / 10;
 	}
 	
-	public String toString() { return "Computer"; }
+	public String toString() { return "Computer2"; }
 }
 
-class Audio extends Product{
-	Audio(){
+class Audio2 extends Product2{
+	Audio2(){
 		super.price = 1_000_000;
 		super.bonusPoint = super.price / 10;
 	}
 	
-	public String toString() { return "Audio"; }
+	public String toString() { return "Audio2"; }
 }
 
-class Buyer {
-	int index = 0;
+class Buyer2 {
 	int money = 5_000_000;
 	int bonusPoint = 0;
 
-	Product[] cart = new Product[10];
+	Vector cart = new Vector();
 	
-	void buy(Product p) {
+	void buy(Product2 p) {
 		
 		if (money <= 0) {
 			System.out.println("No money!!!");
@@ -48,10 +49,10 @@ class Buyer {
 		
 		money -= p.price;
 		bonusPoint += p.bonusPoint;
-		cart[index] = p;
-		index++;
+		cart.add(p);
+		//index++;
 		
-		System.out.println("Purchase Product -> " + p.toString());
+		System.out.println("Purchase Product2 -> " + p.toString());
 		System.out.println("Spend money -> " + p.price + " Won");
 		System.out.println("Bonus Point -> " + p.bonusPoint + " Point");
 		System.out.println("Left money -> " + money + " Won");
@@ -63,10 +64,11 @@ class Buyer {
 		int bP = 0;
 		String list = "";
 		
-		for(int j = 0; j < index; j++) {
-			sum += cart[j].price;
-			bP += cart[j].bonusPoint;
-			list += cart[j].toString() + ( (j == index - 1) ? "" : ", " );
+		for(int j = 0; j < cart.size(); j++) {
+			Product2 p = (Product2)cart.get(j);
+			sum += p.price;
+			bP += p.bonusPoint;
+			list += p.toString() + ( (j == cart.size() - 1) ? "" : ", " );
 		}
 		
 		System.out.println("Your Total Price Sum : " + sum + " Won");
@@ -76,19 +78,19 @@ class Buyer {
 	}
 }
 
-public class OOPII_IN1 {
+public class OOPII_Vector {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Buyer b1 = new Buyer();
+		Buyer2 b1 = new Buyer2();
 		
-		b1.buy(new TV() );
-		b1.buy(new Computer() );
-		b1.buy(new Audio() );
+		b1.buy(new TV2() );
+		b1.buy(new Computer2() );
+		b1.buy(new Audio2() );
 
-		b1.buy(new TV() );
-		b1.buy(new Computer() );
-		b1.buy(new Audio() );
+		b1.buy(new TV2() );
+		b1.buy(new Computer2() );
+		b1.buy(new Audio2() );
 		
 		b1.summary();
 	}
