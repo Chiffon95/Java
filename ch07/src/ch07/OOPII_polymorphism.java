@@ -8,26 +8,26 @@ class Car1 {
 		System.out.println("Drive, Brrr~");
 	}
 }
-class FireEngine extends Car1 {
+class FireEngine1 extends Car1 {
 	void water() {
 		System.out.println("Water!!!");
 	}
 }
-class Ambulance extends Car1{}
+class Ambulance1 extends Car1{}
 
 public class OOPII_polymorphism {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		FireEngine f = new FireEngine();
+		FireEngine1 f = new FireEngine1();
 		Car1 c = new Car1();
 		
 		Car1 c2 = (Car1)f;
-		FireEngine c3 = (FireEngine)c2;
+		FireEngine1 c3 = (FireEngine1)c2; //c2 is 'FireEngine1'
 		
-		FireEngine f2 = (FireEngine)c; // Can't polymorphism from Car to FireEngine
+		FireEngine1 f2 = (FireEngine1)c; // Can't polymorphism from 'Car' to 'FireEngine1'
 		
-//		Ambulance a = (Ambulance)f; //NO extends - Ambulance & FireEngine
+//		Ambulance1 a = (Ambulance1)f; //NO extends - 'Ambulance1' & 'FireEngine1'
 	}
 
 }
