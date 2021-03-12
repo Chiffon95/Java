@@ -74,7 +74,7 @@ class Dropship extends Unit implements Fightable{
 	public boolean attackable () { return false; }
 }
 
-public class pkg1_test {
+public class pkg1_implements {
 
 	public static void main(String[] args) {
 	// TODO Auto-generated method stub
