@@ -14,7 +14,7 @@ public class Comparator_n_Comparable_1 {
 		Integer[] arr3 = Arrays.stream(arr2).boxed().toArray(Integer[]::new);
 		
 		Arrays.sort(arr1); // Ascending order
-		// Reverse order
+		// Descending order
 //		Arrays.sort(arr3, Collections.reverseOrder()); // 1.Use Collections method
 //		Arrays.sort(arr3, (i1, i2) -> i2 - i1); // 2 Use Lambda-style
 		Arrays.sort(arr3, new Comparator<Integer>() { // 3. Use compare()
