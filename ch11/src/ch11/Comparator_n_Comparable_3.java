@@ -16,8 +16,10 @@ class Fruit implements Comparable<Fruit>{
 
 	@Override
 	public int compareTo(Fruit fruit) {
-		// TODO Auto-generated method stub
 		return this.price - fruit.price;
+	}
+	public int compare(String s1, String s2) {
+		return s1.length() - s2.length();
 	}
 }
 public class Comparator_n_Comparable_3 {
@@ -29,6 +31,7 @@ public class Comparator_n_Comparable_3 {
 		};
 		//Price order
 		// Use compareTo()
+//		Arrays.sort(arr); // compare String fail
 		Arrays.sort(arr); // Ascending order
 		System.out.println(Arrays.toString(arr)); // Descending order
 		Arrays.sort(arr, Collections.reverseOrder());
