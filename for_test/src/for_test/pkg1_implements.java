@@ -17,7 +17,7 @@ class Marine extends Unit implements Fightable{
     
 	void stimPack() {}
 
-	//Overriding
+	@Override
 	public void move(int xPoint, int yPoint) {
 		super.xPoint = xPoint;
 		super.yPoint = yPoint;
@@ -36,7 +36,7 @@ class Marine extends Unit implements Fightable{
 class Tank extends Unit implements Fightable{
 	void chaneMode() {}
 
-	//Overriding
+	@Override
 	public void move(int xPoint, int yPoint) {
 		super.xPoint = xPoint;
 		super.yPoint = yPoint;
@@ -57,7 +57,7 @@ class Dropship extends Unit implements Fightable{
 	void load() {}
 	void unload() {}
 
-	//Overriding
+	@Override
 	public void move(int xPoint, int yPoint) {
 		super.xPoint = xPoint;
 		super.yPoint = yPoint;
